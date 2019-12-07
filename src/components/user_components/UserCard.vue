@@ -1,6 +1,6 @@
 <template>
   <div class="user-card-wrapper">
-    <img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png" alt>
+    <img :src="this.userPhoto" alt="Users first found photo">
     <div class="spacer"></div>
     <h3>{{user.name}}</h3>
   </div>
@@ -9,7 +9,7 @@
 <script>
 export default {
   name: "UserCard",
-  props: ["user"]
+  props: ["user", "userPhoto"],
 };
 </script>
 

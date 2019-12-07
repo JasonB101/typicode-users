@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <router-view 
-    :users="users" 
-    :albums="albums" 
-    :photos="photos"/>
+    <router-view :users="users" :albums="albums" :photos="photos"/>
   </div>
 </template>
 
@@ -19,9 +16,9 @@ export default {
   },
   data() {
     return {
-     users: [],
-     albums: [],
-     photos: [],
+      users: [],
+      albums: [],
+      photos: []
     };
   },
   methods: {
@@ -31,7 +28,7 @@ export default {
         .then(result => (this.users = result.data))
         .catch(err => console.log(err));
     },
-  
+
     getAlbums() {
       axios
         .get("https://jsonplaceholder.typicode.com/albums")
@@ -41,7 +38,7 @@ export default {
 
     getPhotos() {
       axios
-        .get("https://jsonplaceholder.typicode.com/posts")
+        .get("https://jsonplaceholder.typicode.com/photos")
         .then(result => (this.photos = result.data))
         .catch(err => console.log(err));
     }
@@ -51,7 +48,6 @@ export default {
     this.getAlbums();
     this.getPhotos();
   }
-  
 };
 </script>
 

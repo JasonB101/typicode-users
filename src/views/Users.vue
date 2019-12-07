@@ -1,6 +1,10 @@
 <template>
   <div>
-    <UserList v-bind:users='users'/>
+    <UserList 
+    v-bind:users='users'
+    v-bind:albums='albums'
+    v-bind:photos='photos'
+    />
   </div>
 </template>
 
