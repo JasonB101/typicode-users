@@ -5,32 +5,16 @@
 </template>
 
 <script>
-import axios from "axios";
-import UserList from "../components/UserComponents/UserList";
+import UserList from "../components/user_components/UserList";
 
 export default {
   name: "Users",
+  props: ['users', 'albums', 'photos'],
   components: {
       UserList
   },
-  data() {
-    return {
-      users: [],
-      albums: [],
-      photos: []
-    };
-  },
-  created() {
-    this.getUsers();
-  },
-  methods: {
-    getUsers() {
-      axios
-        .get("https://jsonplaceholder.typicode.com/users")
-        .then(result => (this.users = result.data))
-        .catch(err => console.log(err));
-    }
-  }
+  
+  
 };
 </script>
 
