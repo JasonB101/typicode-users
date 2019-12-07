@@ -7,25 +7,13 @@
 
 <script>
 import Header from "./components/Header";
-import axios from "axios";
+
 export default {
   name: "app",
   components: {
     Header
   },
-  data() {
-    return {
-      userList: []
-    };
-  },
-  created() {
-    console.log("created");
-  },
-  getUsers() {
-    axios.get("https://jsonplaceholder.typicode.com/users")
-    .then(result => this.userList = result.data)
-    .catch(err => console.log(err))
-  }
+  
 };
 </script>
 
