@@ -2,7 +2,8 @@
   <div class="user-list-wrapper">
     <div :key="user.id" v-for="user in users">
       <UserCard :user="user" 
-                :userPhoto="findUserPhoto(user.id)"/>
+                :userPhoto="findUserPhoto(user.id)"
+                />
     </div>
   </div>
 </template>

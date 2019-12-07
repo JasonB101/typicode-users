@@ -1,29 +1,30 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Users from '../views/Users.vue'
+import Photos from '../views/Photos.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/About.vue')
+    redirect: '/users'
   },
   {
     path: '/users',
     name: 'users',
-    component: () => import('../views/Users.vue')
+    component: Users
   },
   {
     path: '/albums',
     name: 'albums',
     component: () => import('../views/Albums.vue')
+  },
+  {
+    path: '/albums/:albumId/photos',
+    name: 'photos',
+    component: Photos,
+    props: true
   }
 ]
 

@@ -2,11 +2,6 @@
   <div class="wrapper">
     <h1>Typicode Users and Info</h1>
     <div class="spacer"></div>
-    <div id="nav">
-      <router-link to="/users">Users</router-link>|
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>
-    </div>
   </div>
 </template>
 

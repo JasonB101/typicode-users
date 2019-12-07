@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div id="nav">
+      <router-link to="/users">Users</router-link>
+    </div>
     <UserList 
     v-bind:users='users'
     v-bind:albums='albums'

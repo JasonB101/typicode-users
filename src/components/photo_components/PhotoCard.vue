@@ -1,23 +1,23 @@
 <template>
-  <div class="album-card-wrapper">
-    <router-link :to="{ path: `albums/${this.album.id}/photos/`}">
-      <img :src="this.albumPhoto" alt="Users first found photo">
+  <div class="photo-card-wrapper">
+    <!-- <router-link :to="{ path: `albums/${this.album.id}/photos/`}"> -->
+      <img :src="this.photo.url" :alt="this.photo.id">
       <div class="spacer"></div>
-      <h3>{{`${album.title.substr(0, 20)}...`}}</h3>
-    </router-link>
+      <h3>{{`${photo.title.substr(0, 20)}...`}}</h3>
+    <!-- </router-link> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AlbumCard',
-  props: ['album', 'albumPhoto'],
+  name: 'PhotoCard',
+  props: ['photo'],
   
 };
 </script>
 
 <style scoped>
-a {
+.photo-card-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;

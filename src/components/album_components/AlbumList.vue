@@ -1,7 +1,7 @@
 <template>
-  <div class="album-list-wrapper">
-    <div v-bind:key="album.id" v-for="album in albums">
-        <AlbumCard v-bind:album="album"/>
+  <div class="albums-list-wrapper">
+    <div :key="album.id" v-for="album in albums">
+        <AlbumCard :album="album" :albumPhoto="findAlbumPhoto(album.id)"/>
     </div>
   </div>
 </template>
@@ -10,9 +10,26 @@
 import AlbumCard from "./AlbumCard"
 export default {
   name: "AlbumList",
-  props: ["albums"],
+  props: ["albums", "photos"],
   components: {
       AlbumCard
+  },
+  methods: {
+    findAlbumPhoto: function(albumId) {
+      const photo = this.$props.photos.find(x => x.albumId === albumId);
+      return (
+        photo ? photo.url :
+        "https://imgaz2.staticbg.com/thumb/large/oaupload/banggood/images/3C/52/af8ba3d3-bf7c-424c-93c3-7bcde9c77b29.jpg"
+      );
+    }
   }
 };
 </script>
+
+<style scoped>
+.albums-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+</style>

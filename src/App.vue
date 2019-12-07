@@ -1,13 +1,20 @@
 <template>
   <div id="app">
     <Header/>
-    <router-view :users="users" :albums="albums" :photos="photos"/>
+    <router-view
+      :users="users"
+      :albums="albums"
+      :photos="photos"
+      :selectedUser="selectedUser"
+      v-on:set-user="setUser"
+    />
   </div>
 </template>
 
 <script>
-import Header from "./components/Header";
+import Header from "./components/layout/Header";
 import axios from "axios";
+import { EventBus } from "./components/eventBus";
 
 export default {
   name: "app",
@@ -18,7 +25,8 @@ export default {
     return {
       users: [],
       albums: [],
-      photos: []
+      photos: [],
+      selectedUser: ""
     };
   },
   methods: {
@@ -41,12 +49,20 @@ export default {
         .get("https://jsonplaceholder.typicode.com/photos")
         .then(result => (this.photos = result.data))
         .catch(err => console.log(err));
+    },
+
+    setUser(userId) {
+      this.selectedUser = userId;
     }
   },
   created() {
     this.getUsers();
     this.getAlbums();
     this.getPhotos();
+    
+    EventBus.$on("set-user", userId => {
+        this.selectedUser = userId;
+      })
   }
 };
 </script>
@@ -55,6 +71,11 @@ export default {
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 24px;
 }
 
 .spacer {
