@@ -1,6 +1,6 @@
 <template>
-  <div class="album-card-wrapper card-wrapper">
-    <router-link :to="{ path: `albums/${this.album.id}/photos/`}">
+  <div class="album-card-wrapper">
+    <router-link :to="{ path: `albums/${this.album.id}/photos/`}" class="card-wrapper">
       <img :src="this.albumPhoto" alt="Users first found photo">
       <div class="spacer"></div>
       <h3>{{`${album.title.substr(0, 20)}...`}}</h3>

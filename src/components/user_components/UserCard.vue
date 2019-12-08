@@ -1,6 +1,6 @@
 <template>
-  <div @click="setUser" class="user-card-wrapper card-wrapper">
-    <router-link to="/albums">
+  <div @click="setUser" class="user-card-wrapper">
+    <router-link to="/albums" class="card-wrapper">
       <img :src="this.userPhoto" alt="Users first found photo">
       <div class="spacer"></div>
       <h3>{{user.name}}</h3>
@@ -25,7 +25,7 @@ export default {
 <style scoped>
 a {
   width: 150px;
-  height: 250px;
+  height: 230px;
 }
 img {
   width: 90%;
