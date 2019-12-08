@@ -60,28 +60,13 @@ export default {
     this.getAlbums();
     this.getPhotos();
     
-    EventBus.$on("set-user", userId => {
-        this.selectedUser = userId;
+    EventBus.$on("set-user", user => {
+        this.selectedUser = user;
       })
   }
 };
 </script>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
 
-a {
-  text-decoration: none;
-  font-size: 24px;
-}
-
-.spacer {
-  flex: 1;
-}
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

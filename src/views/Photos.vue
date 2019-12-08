@@ -1,9 +1,9 @@
 <template>
   <div>
     <div id="nav">
-      <router-link to="/users">Users</router-link> -
-      <router-link to="/albums">Albums</router-link> - 
-      <a class="photos-atag">Photos</a>
+      <router-link to="/users">Users</router-link> >
+      <router-link to="/albums">Albums</router-link> > 
+      <router-link to="">Photos</router-link>
     </div>
     <PhotoList :photos="filteredPhotos"/>
   </div>
@@ -27,7 +27,5 @@ export default {
 </script>
 
 <style scoped>
-.photos-atag {
-  color:  #42b983;
-}
+
 </style>

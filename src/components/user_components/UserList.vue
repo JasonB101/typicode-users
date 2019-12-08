@@ -1,5 +1,5 @@
 <template>
-  <div class="user-list-wrapper">
+  <div class="user-list-wrapper list">
     <div :key="user.id" v-for="user in users">
       <UserCard :user="user" 
                 :userPhoto="findUserPhoto(user.id)"
@@ -30,10 +30,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.user-list-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-}
-</style>

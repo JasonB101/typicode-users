@@ -21,11 +21,12 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 180px;
-  height: 250px;
+  width: 160px;
+  height: 220px;
   margin: 15px;
   padding: 5px;
   cursor: pointer;
+  color: #666;
 }
 img {
   width: 90%;

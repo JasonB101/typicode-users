@@ -1,5 +1,5 @@
 <template>
-  <div class="albums-list-wrapper">
+  <div class="albums-list-wrapper list">
     <div :key="album.id" v-for="album in albums">
         <AlbumCard :album="album" :albumPhoto="findAlbumPhoto(album.id)"/>
     </div>
@@ -26,10 +26,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.albums-list-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-}
-</style>

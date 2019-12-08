@@ -1,5 +1,5 @@
 <template>
-  <div class="photo-list-wrapper">
+  <div class="photo-list-wrapper list">
     <div :key="photo.id" v-for="photo in photos">
         <PhotoCard :photo="photo"/>
     </div>
@@ -17,10 +17,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.photo-list-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-}
-</style>
+

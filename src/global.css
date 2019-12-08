@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#app {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background: #e6e6e6;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.list {
+    background: rgb(240, 240, 240);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    height: calc(100vh - 200px);
+    overflow: auto;
+    /* border-top: 1px solid black */
+}
+
+.spacer {
+    flex: 1;
+}
+
+#nav {
+    margin: 20px;
+}
+
+a {
+    color: #666;
+    margin: 0 3px 0 3px;
+}
+
+#nav a:visited {
+    color: #666;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+#nav a.router-link-exact-active {
+    color: #42b983;
+    text-decoration: none;
+    cursor: default;
+}

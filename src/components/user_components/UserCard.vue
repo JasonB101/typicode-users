@@ -16,7 +16,7 @@ export default {
   props: ["user", "userPhoto"],
   methods: {
     setUser() {
-      EventBus.$emit("set-user", this.user.id);
+      EventBus.$emit("set-user", this.user);
     }
   }
 };
@@ -27,7 +27,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 180px;
+  width: 150px;
   height: 250px;
   margin: 15px;
   padding: 5px;

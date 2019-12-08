@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1>Typicode Users and Info</h1>
+    <h1>Typicode Users and Photos</h1>
     <div class="spacer"></div>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
 .wrapper {
   display: flex;
   flex-direction: column;
-  background: #666;
+  background: rgb(53, 53, 53);
   height: 120px;
   text-align: center;
   padding: 15px;
