@@ -25,6 +25,9 @@ const routes = [
     name: 'photos',
     component: Photos,
     props: true
+  },
+  { path: "*",
+    redirect: '/users', 
   }
 ]
 

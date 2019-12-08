@@ -29,4 +29,10 @@ a {
     color: rgb(224, 224, 224);
     cursor: pointer;
 }
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 26px;
+  }
+}
 </style>

@@ -6,7 +6,6 @@
       :albums="albums"
       :photos="photos"
       :selectedUser="selectedUser"
-      v-on:set-user="setUser"
     />
   </div>
 </template>

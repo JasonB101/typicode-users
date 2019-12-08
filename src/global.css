@@ -3,19 +3,15 @@
     margin: 0;
 }
 
-#app {
-    max-height: 100vh;
-    overflow: hidden;
-}
-
 body {
     background: #e6e6e6;
-
+    overflow: hidden;
 }
 
 a {
     text-decoration: none;
     font-size: 24px;
+    color: #666;
 }
 
 .list {
@@ -23,10 +19,18 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5px;
+    padding: 5px 5px 40px 5px;
     height: calc(100vh - 200px);
     overflow: auto;
-    /* border-top: 1px solid black */
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: #666;
 }
 
 .spacer {
@@ -37,12 +41,11 @@ a {
     margin: 20px;
 }
 
-a {
-    color: #666;
+#nav a {
     margin: 0 3px 0 3px;
 }
 
-#nav a:visited {
+a:visited {
     color: #666;
 }
 

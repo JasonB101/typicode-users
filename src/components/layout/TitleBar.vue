@@ -19,4 +19,10 @@ export default {
     color: rgb(58, 58, 58);
     padding-bottom: 20px;
 }
+
+@media (max-width: 500px){
+    h1 {
+        font-size: 24px;
+    }
+}
 </style>

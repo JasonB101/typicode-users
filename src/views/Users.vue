@@ -3,11 +3,7 @@
     <div id="nav">
       <router-link to="/users">Users</router-link>
     </div>
-    <UserList 
-    v-bind:users='users'
-    v-bind:albums='albums'
-    v-bind:photos='photos'
-    />
+    <UserList :users="users" :albums="albums" :photos="photos"/>
   </div>
 </template>
 
@@ -16,12 +12,10 @@ import UserList from "../components/user_components/UserList";
 
 export default {
   name: "Users",
-  props: ['users', 'albums', 'photos'],
+  props: ["users", "albums", "photos"],
   components: {
-      UserList
-  },
-  
-  
+    UserList
+  }
 };
 </script>
 

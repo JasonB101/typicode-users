@@ -1,9 +1,9 @@
 <template>
-  <div class="album-card-wrapper">
+  <div class="album-card-wrapper card-wrapper">
     <router-link :to="{ path: `albums/${this.album.id}/photos/`}">
       <img :src="this.albumPhoto" alt="Users first found photo">
       <div class="spacer"></div>
-      <h5>{{`${album.title.substr(0, 20)}...`}}</h5>
+      <h3>{{`${album.title.substr(0, 20)}...`}}</h3>
     </router-link>
   </div>
 </template>
@@ -18,19 +18,15 @@ export default {
 
 <style scoped>
 a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 140px;
-  height: 200px;
-  margin: 15px;
-  padding: 5px;
-  cursor: pointer;
+  height: 160px;
+
 }
 img {
   width: 90%;
 }
-h5 {
+h3 {
+  font-size: 14px;
   text-align: center;
 }
 </style>
